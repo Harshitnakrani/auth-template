@@ -1,0 +1,45 @@
+{
+  "compilerOptions": {
+    /* Basic Options */
+    "target": "esnext",                     // Modern JS output
+    "module": "nodenext",                   // Node.js ESM support
+    "moduleResolution": "nodenext",         // Resolve Node-style imports
+    "allowJs": false,
+
+    /* Root and Output */
+    "rootDir": "./src",                     // Your source files
+    "outDir": "./dist",  
+    "noEmit": true,                  // Compiled JS output
+
+    /* Type Checking */
+    "strict": true,                         // Enable all strict type checks
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "exactOptionalPropertyTypes": true,
+    "noUncheckedIndexedAccess": true,
+
+    /* Module Options */
+    "esModuleInterop": true,                // Allows default imports from CommonJS
+    "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "isolatedModules": true,
+    "allowImportingTsExtensions": true,     // ALLOW .ts imports now
+
+    /* Source Maps & Declarations */
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+
+    /* Node Types */
+    "types": ["node"],
+
+    /* Other Options */
+    "skipLibCheck": true,
+    "noUncheckedSideEffectImports": true,
+    "moduleDetection": "force"
+  },
+  "include": ["src/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}
