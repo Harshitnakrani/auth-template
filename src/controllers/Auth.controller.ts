@@ -1,18 +1,12 @@
 import { asyncHandeler } from "../utils/asyncHandler.ts";
 import { User } from "../models/user.model.ts";
-import type { IUser, IUserMethods } from '../models/user.model.ts'
+import type { IUser, IUserMethods , IRegisterRequest} from "../types/types.ts"
 import { ApiResponse } from "../utils/ApiResponse.ts";
 import { ApiError } from "../utils/ApiError.ts";
 import type { Request, Response } from "express";
 import { uploadOnCloudinary } from "../utils/cloudinary.ts";
 import jwt from "jsonwebtoken";
 
-export interface IRegisterRequest {
-    username?: string;
-    email?: string;
-    fullname?: string;
-    password?: string;
-}
 
 interface AuthRequest extends Request {
     user?: { _id: string };

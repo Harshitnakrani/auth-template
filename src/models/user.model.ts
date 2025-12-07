@@ -1,22 +1,9 @@
 import mongoose, { Schema, Document, Model } from "mongoose";
 import jwt from "jsonwebtoken";
 import bcrypt from "bcryptjs";
+import type { IUser, IUserMethods } from "../types/types.ts";
 
-export interface IUserMethods {
-    isPasswordCorrect(password: string): Promise<boolean>;
-    generateAccessToken(): string;
-    generateRefreshToken(): string;
-}
 
-export interface IUser extends Document {
-    username: string;
-    email: string;
-    fullname: string;
-    avatar: string;
-    coverImage: string;
-    password: string;
-    refreshToken: string;
-}
 export type UserModel = Model<IUser, {}, IUserMethods>;
 
 const userSchema = new Schema<IUser, UserModel, IUserMethods>(
