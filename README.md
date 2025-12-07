@@ -60,8 +60,8 @@ auth/
 
 1. **Clone the repository**
    ```bash
-   git clone <your-repo-url>
-   cd auth
+   git clone (https://github.com/Harshitnakrani/auth-template.git)
+   cd auth-template
    ```
 
 2. **Install dependencies**
@@ -78,7 +78,7 @@ auth/
 
 5. **Start the server**
    ```bash
-   npm run dev
+    npx tsx src/index.ts
    ```
 
 ## 🔧 Environment Variables
